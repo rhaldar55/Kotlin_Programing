@@ -20,4 +20,10 @@ fun main() {
     }while (j<5)
 
 
+    //BREAK
+    for(i in 1..10){
+        println(i)
+        if(i==5)
+            break
+    }
 }
