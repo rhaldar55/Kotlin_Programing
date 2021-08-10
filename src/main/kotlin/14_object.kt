@@ -9,14 +9,18 @@ fun main() {
     println(CustomersData.count)
     println(CustomersData.myMethod("Hello"))
 
+    MyClass.count
+    MyClass.typeOfCustomers()
+
 }
 
-open class MySuperClass{
-    open fun myMethod(str:String){
+open class MySuperClass {
+    open fun myMethod(str: String) {
         println("MySuperClass")
     }
 }
-object CustomersData :MySuperClass() {
+
+object CustomersData : MySuperClass() {
     var count: Int = 1          //Behaves like STATIC variable
 
     fun typeOfCustomers(): String {     ////Behaves like STATIC method
@@ -25,11 +29,23 @@ object CustomersData :MySuperClass() {
 
     override fun myMethod(str: String) {    //Currently begaving like STATIC method
         super.myMethod(str)
-        println("CustomersData : "+ str)
+        println("CustomersData : " + str)
     }
 
     init {
-
     }
+}
 
+
+//Companion Object
+class MyClass {
+
+    companion object  {
+        var count: Int = 1          //Behaves like STATIC variable
+
+
+        fun typeOfCustomers(): String {     ////Behaves like STATIC method
+            return "Indian..."
+        }
+    }
 }
