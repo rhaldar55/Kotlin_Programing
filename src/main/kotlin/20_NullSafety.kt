@@ -5,7 +5,7 @@ fun main() {
 
 
     //1. Safe call (?.)
-    //Returns the length if 'name' is null else returns NULL
+    //Returns the length if 'name' is not null else returns NULL
     //Use it if you don't mind getting NULL value
 
 
@@ -22,7 +22,7 @@ fun main() {
     }
 
     //3. Elvis-operator (?:)
-    //when we have nullable reference 'name', we can say "is anem is not null", use ie,
+    //when we have nullable reference 'name', we can say "is name is not null", use it,
     //otherwise use some non-null value
     val  len = if (name!=null)
                     name.length
